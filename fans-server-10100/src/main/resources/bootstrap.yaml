@@ -1,0 +1,20 @@
+server:
+  port: 10100
+
+spring:
+  application:
+    name: fans-server
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+        namespace: 5f2af30b-b049-4d83-b625-350bd1bc9577
+        group: DEFAULT_GROUP
+        refresh-enabled: true
+        shared-configs[0]:
+          data-id: sentinel-config.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+
+

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ed1d8a71-4839-4c83-9af0-0f186014ec7d" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fans-server-10100/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server-14000.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server-14000/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-server-30100/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fans-server-10100/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fans-server-10100/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/FansServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/FansServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/controller/FansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/controller/FansController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fans-server-10100/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fans-server-10100/target/classes/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/film-server-20100/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/controller/FilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/controller/FilmController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/entity/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/entity/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/mapper/FilmMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/mapper/FilmMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/service/FilmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/service/FilmService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/service/impl/FilmServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/service/impl/FilmServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film-server-20100/target/classes/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/system/GatewayServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/system/config/GatewayConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/system/filter/TokenFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/system/utils/JwtUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-server-30100/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-server-30100/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-server-30100/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-server-30100/target/classes/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_film.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/.gitignore" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="printErrorStackTraces" value="true" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2QUnsy9FyIWwrRbna7VK6LMfpI2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "go.import.settings.migrated": "true",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/looook/neuedu/server_film/gateway-server-14000/src/main/resources/application.yaml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2741738",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "2f81547da9e5ee138108687131c53611",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\looook\neuedu\server_film" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.system" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.GatewayServerApplication">
+    <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.system.CodeGenerator" />
+      <module name="film-server-20100" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.system.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FansServerApplication-10101" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <envs>
+        <env name="--server.port" value="10101" />
+      </envs>
+      <module name="fans-server-10100" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.system.FansServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FansServerApplication-10102" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <envs>
+        <env name="--server.port" value="10102" />
+      </envs>
+      <module name="fans-server-10100" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.system.FansServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FansServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" nameIsGenerated="true">
+      <module name="fans-server-10100" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.system.FansServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FilmServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" nameIsGenerated="true">
+      <module name="film-server-20100" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.system.FilmServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" nameIsGenerated="true">
+      <module name="gateway-server-14000" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.system.GatewayServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" nameIsGenerated="true">
+      <option name="DEBUG_MODE" value="true" />
+      <module name="order-server-30100" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.system.OrderServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="test-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.system.ServerConfigApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.system.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.CodeGenerator" />
+      <item itemvalue="Spring Boot.GatewayServerApplication" />
+      <item itemvalue="Spring Boot.FansServerApplication" />
+      <item itemvalue="Spring Boot.FansServerApplication-10101" />
+      <item itemvalue="Spring Boot.FansServerApplication-10102" />
+      <item itemvalue="Spring Boot.FilmServerApplication" />
+      <item itemvalue="Spring Boot.OrderServerApplication" />
+      <item itemvalue="Spring Boot.ServerConfigApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CodeGenerator" />
+        <item itemvalue="Spring Boot.ServerConfigApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed1d8a71-4839-4c83-9af0-0f186014ec7d" name="Changes" comment="" />
+      <created>1682469975580</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682469975580</updated>
+      <workItem from="1685417239987" duration="4110000" />
+      <workItem from="1685428182504" duration="421000" />
+      <workItem from="1685428621470" duration="2827000" />
+      <workItem from="1685491708358" duration="9522000" />
+      <workItem from="1685540853014" duration="871000" />
+      <workItem from="1685578619429" duration="15318000" />
+      <workItem from="1685626437360" duration="618000" />
+      <workItem from="1685670244172" duration="2472000" />
+      <workItem from="1685697994771" duration="1193000" />
+      <workItem from="1685712281217" duration="700000" />
+      <workItem from="1685755868960" duration="1813000" />
+      <workItem from="1685759135225" duration="3176000" />
+      <workItem from="1685762324388" duration="9869000" />
+      <workItem from="1685795745759" duration="4090000" />
+      <workItem from="1685803688568" duration="769000" />
+      <workItem from="1685838624188" duration="10038000" />
+    </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1685759248974</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685759248974</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>

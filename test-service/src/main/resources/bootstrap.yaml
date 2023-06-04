@@ -1,0 +1,12 @@
+server:
+  port: 50001
+spring:
+  application:
+    name: server-config
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+        namespace: e367139a-9f03-4f13-8c99-d371d5d00405
+        group: DEFAULT_GROUP

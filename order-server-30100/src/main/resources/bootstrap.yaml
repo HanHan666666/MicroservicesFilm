@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: order-server
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+        namespace: 5f2af30b-b049-4d83-b625-350bd1bc9577
+        group: DEFAULT_GROUP
+        refresh-enabled: true
