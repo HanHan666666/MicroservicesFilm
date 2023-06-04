@@ -17,6 +17,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
+import java.time.LocalDateTime;
+
 
 @CrossOrigin("*")
 @RestController
@@ -100,22 +102,27 @@ public class FansController extends BaseController {
 
     @PostMapping("/register")
     public R register(@RequestBody Fans fans) throws Exception {
-        Fans f = fansService.getById(fans.getId());
+        Fans f = fansService.getByUsername(fans.getUsername());
 
         if (f != null) {
             return R.error(ResultCode.USER_HAS_EXIST, "该手机已经存在");
         }
         // 从redis中获取验证码
-        String code = (String) redisUtil.hget("code_sms", fans.getId().toString());
+        String code = (String) redisUtil.hget("code_sms", fans.getUsername());
         if (code == null) {
             return R.error(ResultCode.OTHER_ERROR, "验证码已过期或不存在");
         }
         if (!code.equals(fans.getSms())) {
+            log.info("code:{}", code);
+            log.info("fans.getSms():{}", fans.getSms());
             return R.error(ResultCode.OTHER_ERROR, "验证码错误");
         }
+        fans.setCreated(LocalDateTime.now());
         fans.setPassword(MD5Utils.md5(MD5Utils.inputPassToNewPass(fans.getPassword())));
         fansService.save(fans);
-        return R.ok();
+        //从redis中删除验证码
+        redisUtil.hdel("code_sms", fans.getUsername());
+        return R.ok("注册成功");
     }
     private final RedisUtil redisUtil;
     // 获取验证码接口

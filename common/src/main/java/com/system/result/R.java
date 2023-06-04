@@ -13,6 +13,12 @@ public class R {
     private Map<String, Object> data = new HashMap<>();
 
     // 请求成功，返回结果
+    public static R ok(String message) {
+        R r = new R();
+        r.setCode(ResultCode.SUCCESS);
+        r.setMessage(message);
+        return r;
+    }
     public static R ok() {
         R r = new R();
         r.setCode(ResultCode.SUCCESS);

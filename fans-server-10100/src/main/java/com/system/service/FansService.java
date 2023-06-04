@@ -12,5 +12,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2023-05-25
  */
 public interface FansService extends IService<Fans> {
-
+    Fans getByUsername(String username);
 }

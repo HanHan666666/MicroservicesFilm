@@ -4,6 +4,7 @@ import com.system.entity.Fans;
 import com.system.mapper.FansMapper;
 import com.system.service.FansService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,5 +17,10 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class FansServiceImpl extends ServiceImpl<FansMapper, Fans> implements FansService {
-
+@Autowired
+    FansMapper fansMapper;
+    @Override
+    public Fans getByUsername(String username) {
+        return fansMapper.getByUsername(username);
+    }
 }
