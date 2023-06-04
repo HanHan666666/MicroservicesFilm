@@ -1,5 +1,6 @@
 package com.system.controller;
 
+import com.aliyun.dysmsapi20170525.models.SendSmsResponse;
 import com.system.base.BaseController;
 import com.system.entity.Fans;
 
@@ -8,6 +9,9 @@ import com.system.result.ResultCode;
 import com.system.service.FansService;
 import com.system.utils.JwtUtils;
 import com.system.utils.MD5Utils;
+import com.system.utils.RedisUtil;
+import com.system.utils.SendSMS;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
@@ -16,18 +20,26 @@ import org.springframework.web.client.RestTemplate;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/fans")
+@RequestMapping("/")
+@Slf4j
 public class FansController extends BaseController {
-    @Autowired
+    final
     FansService fansService;
 
-    @Autowired
+    final
     JwtUtils jwtUtils;
-    @Autowired
+    final
     RestTemplate restTemplate;
 
     @Value("${server.port}")
     public String port;
+
+    public FansController(FansService fansService, JwtUtils jwtUtils, RestTemplate restTemplate, RedisUtil redisUtil) {
+        this.fansService = fansService;
+        this.jwtUtils = jwtUtils;
+        this.restTemplate = restTemplate;
+        this.redisUtil = redisUtil;
+    }
 
     @GetMapping("/port")
     public String port() {
@@ -76,5 +88,46 @@ public class FansController extends BaseController {
         } else {
             return R.error(ResultCode.USER_NOT_EXIST, "该用户不存在");
         }
+    }
+
+    // fans注册，传入手机号，手机验证码，密码，性别
+    // 从配置文件中获取阿里云的accessKeyId和accessKeySecret
+    @Value("${aliyun.accessKeyId}")
+    private String accessKeyId;
+
+    @Value("${aliyun.secretAccessKey}")
+    private String accessKeySecret;
+
+    @PostMapping("/register")
+    public R register(@RequestBody Fans fans) throws Exception {
+        Fans f = fansService.getById(fans.getId());
+
+        if (f != null) {
+            return R.error(ResultCode.USER_HAS_EXIST, "该手机已经存在");
+        }
+        // 从redis中获取验证码
+        String code = (String) redisUtil.hget("code_sms", fans.getId().toString());
+        if (code == null) {
+            return R.error(ResultCode.OTHER_ERROR, "验证码已过期或不存在");
+        }
+        if (!code.equals(fans.getSms())) {
+            return R.error(ResultCode.OTHER_ERROR, "验证码错误");
+        }
+        fans.setPassword(MD5Utils.md5(MD5Utils.inputPassToNewPass(fans.getPassword())));
+        fansService.save(fans);
+        return R.ok();
+    }
+    private final RedisUtil redisUtil;
+    // 获取验证码接口
+    @GetMapping("/getCode/{phone}")
+    public R getCode(@PathVariable String phone) throws Exception {
+        // 产生一个随机的四位数的code
+        String code = String.valueOf((int) ((Math.random() * 9 + 1) * 1000));
+        // 把生成的验证码和手机号存到redis
+        redisUtil.hset("code_sms",phone, code, 60L);
+        // SendSmsResponse smsResponse = SendSMS.Send(phone, accessKeyId, accessKeySecret, code);
+        // log.info("短信接口返回的数据----------------{}", smsResponse);
+        log.info("验证码为：{}", code);
+        return R.ok();
     }
 }
