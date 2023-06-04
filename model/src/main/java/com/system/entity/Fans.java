@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.system.base.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -24,6 +25,7 @@ public class Fans extends BaseEntity {
     private static final long serialVersionUID = 1L;
 
     @TableField("username")
+    @JsonProperty("phone")
     private String username;
 
     @TableField("password")
@@ -46,5 +48,8 @@ public class Fans extends BaseEntity {
 
     @TableField(exist = false)
     private String token;
+
+    @TableField(exist = false)
+    private String sms; // 手机验证码
 
 }

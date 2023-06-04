@@ -4,16 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed1d8a71-4839-4c83-9af0-0f186014ec7d" name="Changes" comment="update readme">
-      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/resources/templates/mapper.java.ftl" afterDir="false" />
+    <list default="true" id="ed1d8a71-4839-4c83-9af0-0f186014ec7d" name="Changes" comment="开工">
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/system/utils/RedisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/system/utils/SendSMS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fans-server-10100/src/test/java/MyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/controller/ArrangementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/controller/PosterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/entity/Arrangement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/entity/Poster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/mapper/ArrangementMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/mapper/CategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/mapper/PosterMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/service/ArrangementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/service/PosterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/service/impl/ArrangementServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/service/impl/PosterServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/resources/mapper/ArrangementMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/resources/mapper/CategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/resources/mapper/PosterMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fans-server-10100/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/fans-server-10100/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film-server-20100/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/CodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/controller/FilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/controller/FilmController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server-14000/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server-14000/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server-14000/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server-14000/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fans-server-10100/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fans-server-10100/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/controller/FansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/controller/FansController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/system/entity/Fans.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/system/entity/Fans.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +105,11 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\looook\neuedu\server_film" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.system.utils" />
       <recent name="com.system" />
     </key>
   </component>
@@ -99,7 +120,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CodeGenerator">
+  <component name="RunManager" selected="JUnit.MyTest.test">
     <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.system.CodeGenerator" />
       <module name="film-server-20100" />
@@ -109,6 +130,16 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fans-server-10100" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -177,6 +208,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.CodeGenerator" />
+      <item itemvalue="JUnit.MyTest.test" />
       <item itemvalue="Spring Boot.GatewayServerApplication" />
       <item itemvalue="Spring Boot.FansServerApplication" />
       <item itemvalue="Spring Boot.FansServerApplication-10101" />
@@ -187,6 +219,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyTest.test" />
         <item itemvalue="Application.CodeGenerator" />
         <item itemvalue="Spring Boot.ServerConfigApplication" />
       </list>
@@ -219,7 +252,7 @@
       <workItem from="1685795745759" duration="4090000" />
       <workItem from="1685803688568" duration="769000" />
       <workItem from="1685838624188" duration="10038000" />
-      <workItem from="1685848731079" duration="8645000" />
+      <workItem from="1685848731079" duration="16402000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1685759248974</created>
@@ -242,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685849829352</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="开工">
+      <created>1685865082083</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685865082083</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +305,8 @@
     </ignored-roots>
     <MESSAGE value="init" />
     <MESSAGE value="update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="update readme" />
+    <MESSAGE value="开工" />
+    <option name="LAST_COMMIT_MESSAGE" value="开工" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

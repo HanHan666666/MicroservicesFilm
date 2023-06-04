@@ -18,4 +18,5 @@ public class ResultCode {
     public static final Integer DATA_IS_WRONG = 50002; //数据查询有错
     public static final Integer DATA_ALREADY_EXISTED = 50003; //数据已经存在
     public static final Integer DATA_SAVE_WRONG = 50004; //数据保存失败
+    public static final Integer OTHER_ERROR = 99999; //其他错误
 }
