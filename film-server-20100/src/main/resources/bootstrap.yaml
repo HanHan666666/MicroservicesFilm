@@ -9,3 +9,6 @@ spring:
         namespace: 5f2af30b-b049-4d83-b625-350bd1bc9577
         group: DEFAULT_GROUP
         refresh-enabled: true
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG

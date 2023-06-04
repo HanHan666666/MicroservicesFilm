@@ -130,7 +130,7 @@ public class CodeGenerator {
         // 写于父类中的公共字段
         strategy.setSuperEntityColumns("id", "created", "updated", "statu");
         // strategy.setInclude(scanner("表名，多个英文逗号分 割").split(", "));
-          String[] tables = {"sys_film"};
+          String[] tables = {"sys_arrangement"};
 //        strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));
         strategy.setInclude(tables);
         strategy.setEntityTableFieldAnnotationEnable(true); // 为实体类的类上加 @TableName,所有字段上加注解

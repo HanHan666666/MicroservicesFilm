@@ -2,9 +2,12 @@ server:
   port: 14000
 spring:
   application:
-    name: gateway-server
+    name: gateway
   cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+        namespace: 5f2af30b-b049-4d83-b625-350bd1bc9577
+        group: DEFAULT_GROUP
+        refresh-enabled: true

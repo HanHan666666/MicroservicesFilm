@@ -22,17 +22,23 @@ import com.system.base.BaseController;
  * @since 2023-06-04
  */
 @RestController
-@RequestMapping("/film")
+@RequestMapping("")
 @Slf4j
 public class FilmController extends BaseController {
 
         @Autowired
         private FilmService filmService;
 
-
         @GetMapping("/info/{id}")
         public R info(@PathVariable("id") Long id){
             log.info("服务器提供者执行...");
+            Film film = filmService.getById(id);
+            return R.ok().data("film",film);
+        }
+
+        //根据id获取电影信息
+        @GetMapping("/getFilmById/{id}")
+        public R getFilmById(@PathVariable Long id){
             Film film = filmService.getById(id);
             return R.ok().data("film",film);
         }

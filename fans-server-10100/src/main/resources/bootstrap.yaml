@@ -16,5 +16,3 @@ spring:
           data-id: sentinel-config.yaml
           group: DEFAULT_GROUP
           refresh: true
-
-

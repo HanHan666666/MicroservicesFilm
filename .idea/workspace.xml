@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed1d8a71-4839-4c83-9af0-0f186014ec7d" name="Changes" comment="init" />
+    <list default="true" id="ed1d8a71-4839-4c83-9af0-0f186014ec7d" name="Changes" comment="update readme">
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/resources/templates/mapper.java.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fans-server-10100/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/fans-server-10100/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film-server-20100/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/controller/FilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/controller/FilmController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server-14000/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server-14000/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server-14000/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server-14000/src/main/resources/bootstrap.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +32,9 @@
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="true" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -51,7 +64,7 @@
     "git-widget-placeholder": "master",
     "go.import.settings.migrated": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/looook/neuedu/server_film",
+    "last_opened_file_path": "D:/looook/neuedu/server_film/film-server-20100/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -60,7 +73,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2741738",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "spring",
     "spring.configuration.checksum": "9069bc69b62640936cb592643217930a",
     "vue.rearranger.settings.migration": "true"
   }
@@ -69,6 +82,9 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\looook\neuedu\server_film\film-server-20100\src\main\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\looook\neuedu\server_film" />
     </key>
@@ -83,7 +99,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GatewayServerApplication">
+  <component name="RunManager" selected="Application.CodeGenerator">
     <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.system.CodeGenerator" />
       <module name="film-server-20100" />
@@ -177,6 +193,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringGeneralSettings">
+    <option name="allowAutoConfigurationMode" value="true" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ed1d8a71-4839-4c83-9af0-0f186014ec7d" name="Changes" comment="" />
@@ -200,7 +219,7 @@
       <workItem from="1685795745759" duration="4090000" />
       <workItem from="1685803688568" duration="769000" />
       <workItem from="1685838624188" duration="10038000" />
-      <workItem from="1685848731079" duration="943000" />
+      <workItem from="1685848731079" duration="8645000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1685759248974</created>
@@ -216,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685848826759</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update readme">
+      <created>1685849829352</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685849829352</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +264,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="update readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="update readme" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
