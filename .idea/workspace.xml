@@ -4,46 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed1d8a71-4839-4c83-9af0-0f186014ec7d" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fans-server-10100/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server-14000.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server-14000/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-server-30100/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fans-server-10100/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fans-server-10100/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/FansServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/FansServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/controller/FansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/controller/FansController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fans-server-10100/src/main/resources/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fans-server-10100/target/classes/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/film-server-20100/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/CodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/controller/FilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/controller/FilmController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/entity/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/entity/Film.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/mapper/FilmMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/mapper/FilmMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/service/FilmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/service/FilmService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/service/impl/FilmServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/service/impl/FilmServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film-server-20100/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/film-server-20100/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film-server-20100/target/classes/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/system/GatewayServerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/system/config/GatewayConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/system/filter/TokenFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/system/utils/JwtUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-server-30100/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-server-30100/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-server-30100/src/main/resources/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-server-30100/target/classes/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_film.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-service/.gitignore" beforeDir="false" />
-    </list>
+    <list default="true" id="ed1d8a71-4839-4c83-9af0-0f186014ec7d" name="Changes" comment="init" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,16 +51,17 @@
     "git-widget-placeholder": "master",
     "go.import.settings.migrated": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/looook/neuedu/server_film/gateway-server-14000/src/main/resources/application.yaml",
+    "last_opened_file_path": "D:/looook/neuedu/server_film",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2741738",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "2f81547da9e5ee138108687131c53611",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "spring.configuration.checksum": "9069bc69b62640936cb592643217930a",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -238,6 +200,7 @@
       <workItem from="1685795745759" duration="4090000" />
       <workItem from="1685803688568" duration="769000" />
       <workItem from="1685838624188" duration="10038000" />
+      <workItem from="1685848731079" duration="943000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1685759248974</created>
@@ -246,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685759248974</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init">
+      <created>1685848826759</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685848826759</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +234,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
     <MESSAGE value="init" />
     <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
