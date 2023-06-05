@@ -46,12 +46,16 @@ public class TokenFilter implements GlobalFilter {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+
+
         // ServerWebExchange请求上下文request response   因为网关不是基于servlet的不能用web  servletContext
         // chain过滤链  跳转到过滤器之后的访问资源  token存在request中
         ServerHttpRequest request = exchange.getRequest();
         ServerHttpResponse response = exchange.getResponse();
+
         JwtUtils jwtUtils = new JwtUtils();
         String path = request.getPath().toString();
+
         log.info("网关过滤请求路径是{}", path);// 如果是登录/login和注册/register页面还有/getCode/*验证码页面，不需要token
         if (path.contains("/login") || path.contains("/register") || path.contains("/getCode/")) {
             log.info("不需要token，直接放行");
@@ -62,7 +66,11 @@ public class TokenFilter implements GlobalFilter {
         if (StringUtils.isBlank(token)) {
             log.info("token是空------");
             // 前端请求，如果token是空，返回错误 R 封装对象//将封装错误R对象，响应客户端
-            return this.responseWrite(response, 20001, "token为空，没有权限访问");
+            // return this.responseWrite(response, 20001, "token为空，没有权限访问");
+
+            // 测试需要，暂时不验证token，放行所有
+            return chain.filter(exchange);
+
         } else {
             Claims claims = jwtUtils.getClaimByToken(token);// 验证
             if (claims == null) {
