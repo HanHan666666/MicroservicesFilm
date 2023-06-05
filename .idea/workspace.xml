@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed1d8a71-4839-4c83-9af0-0f186014ec7d" name="Changes" comment="06040829">
+    <list default="true" id="ed1d8a71-4839-4c83-9af0-0f186014ec7d" name="Changes" comment="验证码注册完成">
+      <change afterPath="$PROJECT_DIR$/gateway-server-14000/src/main/java/com/system/filter/TokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server-14000/src/main/java/com/system/utils/JwtUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/system/result/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/system/result/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/system/utils/SendSMS.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/system/utils/SendSMS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/controller/FansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/controller/FansController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/mapper/FansMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/mapper/FansMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/service/FansService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/service/FansService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/service/impl/FansServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/service/impl/FansServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +232,9 @@
       <workItem from="1685803688568" duration="769000" />
       <workItem from="1685838624188" duration="10038000" />
       <workItem from="1685848731079" duration="16402000" />
-      <workItem from="1685881179812" duration="2008000" />
+      <workItem from="1685881179812" duration="4369000" />
+      <workItem from="1685890568309" duration="413000" />
+      <workItem from="1685928690617" duration="1952000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1685759248974</created>
@@ -277,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685881818134</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="验证码注册完成">
+      <created>1685883282870</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685883282870</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +311,8 @@
     <MESSAGE value="开工" />
     <MESSAGE value="手机验证码注册" />
     <MESSAGE value="06040829" />
-    <option name="LAST_COMMIT_MESSAGE" value="06040829" />
+    <MESSAGE value="验证码注册完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="验证码注册完成" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

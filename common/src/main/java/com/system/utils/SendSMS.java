@@ -50,8 +50,8 @@ public class SendSMS {
         com.aliyun.dysmsapi20170525.Client client = SendSMS.createClient(accessKeyId, accessKeySecret);
         String Template = "{\"code\":\"" + code + "\"}";
         com.aliyun.dysmsapi20170525.models.SendSmsRequest sendSmsRequest = new com.aliyun.dysmsapi20170525.models.SendSmsRequest()
-                .setSignName("阿里云短信测试")
-                .setTemplateCode("SMS_154950909")
+                .setSignName("震惊部")
+                .setTemplateCode("SMS_461065669")
                 .setPhoneNumbers(phone)
                 .setTemplateParam(Template);
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();

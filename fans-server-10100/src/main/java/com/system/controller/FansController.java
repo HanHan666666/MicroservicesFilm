@@ -74,15 +74,20 @@ public class FansController extends BaseController {
     }
 
     @PostMapping("/login")
-    public R login(@RequestBody Fans fans) {
-        Fans f = fansService.getById(fans.getId());
+    public R info(@RequestBody Fans fans) {
+        System.out.println("fans = " + fans);
+        log.info("粉丝的信息" + fans.getUsername(), fans.getEmail(), fans.getPassword());
+        Fans f = fansService.getByUsername(fans.getUsername());
+
         if (f != null) {
             if (f.getStatu() == 0) {
-                return R.error(ResultCode.USER_ACCOUNT_FORBIDDEN, "账户被禁用");
+                return R.error(ResultCode.USER_ACCOUNT_FORBIDDEN, "用户被禁用");
             }
+
+            // 获取用户输入的密码，再根据盐值加密，再与数据库中的密码比较，使用MD5Utils
             if (f.getPassword().equals(MD5Utils.md5(
                     MD5Utils.inputPassToNewPass(fans.getPassword())))) {
-                f.setToken(jwtUtils.generateToken(f.getId() + " "));
+                f.setToken(jwtUtils.generateToken(f.getUsername()));
                 return R.ok().data("fans", f);
             } else {
                 return R.error(ResultCode.USER_ACCOUNT_ERROR, "密码错误");
@@ -120,21 +125,35 @@ public class FansController extends BaseController {
         fans.setCreated(LocalDateTime.now());
         fans.setPassword(MD5Utils.md5(MD5Utils.inputPassToNewPass(fans.getPassword())));
         fansService.save(fans);
-        //从redis中删除验证码
+        // 从redis中删除验证码
         redisUtil.hdel("code_sms", fans.getUsername());
         return R.ok("注册成功");
     }
+
     private final RedisUtil redisUtil;
+
     // 获取验证码接口
     @GetMapping("/getCode/{phone}")
     public R getCode(@PathVariable String phone) throws Exception {
         // 产生一个随机的四位数的code
         String code = String.valueOf((int) ((Math.random() * 9 + 1) * 1000));
         // 把生成的验证码和手机号存到redis
-        redisUtil.hset("code_sms",phone, code, 60L);
+        redisUtil.hset("code_sms", phone, code, 60L);
         // SendSmsResponse smsResponse = SendSMS.Send(phone, accessKeyId, accessKeySecret, code);
-        // log.info("短信接口返回的数据----------------{}", smsResponse);
+        // log.info("短信接口返回的数据----------------{}", smsResponse.toString());
         log.info("验证码为：{}", code);
         return R.ok();
     }
+
+    // 检查用户是否存在 /check
+    @GetMapping("/check")
+    public R check(@RequestParam String username) {
+        Fans fans = fansService.getByUsername(username);
+        if (fans != null) {
+            return R.error(ResultCode.USER_HAS_EXIST, "该手机已经存在");
+        }
+        return R.ok();
+    }
+
+
 }
