@@ -135,6 +135,10 @@ public class FansController extends BaseController {
     // 获取验证码接口
     @GetMapping("/getCode/{phone}")
     public R getCode(@PathVariable String phone) throws Exception {
+        // 正则匹配手机号
+        if (!phone.matches("^1[3|4|5|7|8][0-9]{9}$")) {
+            return R.error(ResultCode.OTHER_ERROR, "手机号格式不正确");
+        }
         // 产生一个随机的四位数的code
         String code = String.valueOf((int) ((Math.random() * 9 + 1) * 1000));
         // 把生成的验证码和手机号存到redis
