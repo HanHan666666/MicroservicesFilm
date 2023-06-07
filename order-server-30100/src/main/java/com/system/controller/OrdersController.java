@@ -2,19 +2,29 @@ package com.system.controller;
 
 
 import com.alibaba.nacos.client.naming.utils.ThreadLocalRandom;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.WriterException;
+import com.google.zxing.client.j2se.MatrixToImageWriter;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
 import com.system.base.BaseController;
+import com.system.entity.Orders;
 import com.system.feign.FansServerClient;
 import com.system.result.R;
+import com.system.service.OrdersService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.util.Base64;
 import java.util.List;
 
 /**
@@ -30,15 +40,23 @@ import java.util.List;
 @RequestMapping("/orders")
 public class OrdersController extends BaseController {
 
-    @Autowired
-    public RestTemplate restTemplate;
+    final RestTemplate restTemplate;
 
-    @Autowired
+    final
     DiscoveryClient discoveryClient;
-    @Autowired
+    final
     FansServerClient fansServerClient;
+    final
+    OrdersService ordersService;
 
-//    @GetMapping("/instances")
+    public OrdersController(OrdersService ordersService, FansServerClient fansServerClient, DiscoveryClient discoveryClient, RestTemplate restTemplate) {
+        this.ordersService = ordersService;
+        this.fansServerClient = fansServerClient;
+        this.discoveryClient = discoveryClient;
+        this.restTemplate = restTemplate;
+    }
+
+    //    @GetMapping("/instances")
 //    public R list(){
 //        List<ServiceInstance> instances = discoveryClient.getInstances("fans-server");
 //        int index = ThreadLocalRandom.current().nextInt(instances.size());
@@ -77,5 +95,33 @@ public class OrdersController extends BaseController {
         R r = restTemplate.getForObject(url, R.class);
         log.info("服务执行结果--{}",r);
         return r;
+    }
+
+    @GetMapping("/info/{aid}")
+    public R info(@PathVariable("aid") Long aid){
+        List<Orders> ordersList = ordersService.list(new QueryWrapper<Orders>().eq("aid", aid));
+        return R.ok().data("ordersList",ordersList);
+    }
+    @PostMapping("/save")
+    public R info(@RequestBody Orders orders){
+        log.info("订单信息{}",orders);
+        orders.setCreated(LocalDateTime.now());
+        orders.setUpdated(LocalDateTime.now());
+        orders.setStatu(1);
+        ordersService.save(orders);
+        return R.ok();
+    }
+
+    @PostMapping("/qrcode")
+    public R qrcode(@RequestBody String obj) throws IOException, WriterException {
+        log.info(obj);
+        QRCodeWriter qrCodeWriter1 = new QRCodeWriter();
+        BitMatrix bitMatrix1 = qrCodeWriter1.encode(obj, BarcodeFormat.QR_CODE,600, 600);
+            ByteArrayOutputStream outputStream1 = new ByteArrayOutputStream();
+                MatrixToImageWriter.writeToStream(bitMatrix1, "PNG", outputStream1);
+                Base64.Encoder encoder1 = Base64.getEncoder();
+                String str = "data:image/jpeg;base64,";
+                String advUrl = str+encoder1.encodeToString(outputStream1.toByteArray());
+                return R.ok().data("QRCode",advUrl);
     }
 }

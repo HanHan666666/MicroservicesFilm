@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed1d8a71-4839-4c83-9af0-0f186014ec7d" name="Changes" comment="正则匹配手机号">
+    <list default="true" id="ed1d8a71-4839-4c83-9af0-0f186014ec7d" name="Changes" comment="暂时跳过登录验证">
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/system/utils/MyRedisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/controller/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server-14000/src/main/java/com/system/filter/TokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server-14000/src/main/java/com/system/filter/TokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/system/utils/RedisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/system/utils/RedisUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/controller/FansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/controller/FansController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-server-30100/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-server-30100/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-server-30100/src/main/java/com/system/controller/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-server-30100/src/main/java/com/system/controller/OrdersController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,34 +48,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/looook/neuedu/server_film/film-server-20100/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2741738&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;spring&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;9069bc69b62640936cb592643217930a&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "go.import.settings.migrated": "true",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/looook/neuedu/server_film/film-server-20100/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2741738",
+    "service.view.auto.scroll.to.source": "true",
+    "settings.editor.selected.configurable": "spring",
+    "spring.configuration.checksum": "9069bc69b62640936cb592643217930a",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -96,7 +102,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MyTest.test">
+  <component name="RunManager" selected="Spring Boot.FilmServerApplication">
     <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.system.CodeGenerator" />
       <module name="film-server-20100" />
@@ -231,7 +237,8 @@
       <workItem from="1685848731079" duration="16402000" />
       <workItem from="1685881179812" duration="4369000" />
       <workItem from="1685890568309" duration="413000" />
-      <workItem from="1685928690617" duration="3394000" />
+      <workItem from="1685928690617" duration="8563000" />
+      <workItem from="1686015356005" duration="19610000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1685759248974</created>
@@ -296,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685931055681</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="暂时跳过登录验证">
+      <created>1685933613871</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685933613871</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +339,8 @@
     <MESSAGE value="验证码注册完成" />
     <MESSAGE value="用户登录功能" />
     <MESSAGE value="正则匹配手机号" />
-    <option name="LAST_COMMIT_MESSAGE" value="正则匹配手机号" />
+    <MESSAGE value="暂时跳过登录验证" />
+    <option name="LAST_COMMIT_MESSAGE" value="暂时跳过登录验证" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
