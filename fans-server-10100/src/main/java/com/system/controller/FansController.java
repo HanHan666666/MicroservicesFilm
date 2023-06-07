@@ -2,18 +2,17 @@ package com.system.controller;
 
 import com.aliyun.dysmsapi20170525.models.SendSmsResponse;
 import com.system.base.BaseController;
+import com.system.config.RestTemplateConfig;
 import com.system.entity.Fans;
 
 import com.system.result.R;
 import com.system.result.ResultCode;
 import com.system.service.FansService;
-import com.system.utils.JwtUtils;
-import com.system.utils.MD5Utils;
-import com.system.utils.RedisUtil;
-import com.system.utils.SendSMS;
+import com.system.utils.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -35,12 +34,15 @@ public class FansController extends BaseController {
 
     @Value("${server.port}")
     public String port;
+    final
+    MyRedisUtil myRedisUtil;
 
-    public FansController(FansService fansService, JwtUtils jwtUtils, RestTemplate restTemplate, RedisUtil redisUtil) {
+
+    public FansController(FansService fansService, JwtUtils jwtUtils, RestTemplate restTemplate, RedisUtil redisUtil, RestTemplateConfig restTemplateConfig, MyRedisUtil myRedisUtil) {
         this.fansService = fansService;
         this.jwtUtils = jwtUtils;
         this.restTemplate = restTemplate;
-        this.redisUtil = redisUtil;
+        this.myRedisUtil = myRedisUtil;
     }
 
     @GetMapping("/port")
@@ -113,7 +115,7 @@ public class FansController extends BaseController {
             return R.error(ResultCode.USER_HAS_EXIST, "该手机已经存在");
         }
         // 从redis中获取验证码
-        String code = (String) redisUtil.hget("code_sms", fans.getUsername());
+        String code = (String) myRedisUtil.hget("code_sms", fans.getUsername());
         if (code == null) {
             return R.error(ResultCode.OTHER_ERROR, "验证码已过期或不存在");
         }
@@ -126,11 +128,10 @@ public class FansController extends BaseController {
         fans.setPassword(MD5Utils.md5(MD5Utils.inputPassToNewPass(fans.getPassword())));
         fansService.save(fans);
         // 从redis中删除验证码
-        redisUtil.hdel("code_sms", fans.getUsername());
+        myRedisUtil.hdel("code_sms", fans.getUsername());
         return R.ok("注册成功");
     }
 
-    private final RedisUtil redisUtil;
 
     // 获取验证码接口
     @GetMapping("/getCode/{phone}")
@@ -142,7 +143,8 @@ public class FansController extends BaseController {
         // 产生一个随机的四位数的code
         String code = String.valueOf((int) ((Math.random() * 9 + 1) * 1000));
         // 把生成的验证码和手机号存到redis
-        redisUtil.hset("code_sms", phone, code, 60L);
+
+        myRedisUtil.hset("code_sms", phone, code, 60L);
         // SendSmsResponse smsResponse = SendSMS.Send(phone, accessKeyId, accessKeySecret, code);
         // log.info("短信接口返回的数据----------------{}", smsResponse.toString());
         log.info("验证码为：{}", code);

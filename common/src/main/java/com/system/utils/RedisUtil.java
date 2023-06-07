@@ -3,6 +3,8 @@ package com.system.utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ZSetOperations;
+import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
@@ -15,8 +17,15 @@ import java.util.concurrent.TimeUnit;
 @Component
 public class RedisUtil {
 
-    @Autowired
-    private RedisTemplate redisTemplate;
+    private final RedisTemplate redisTemplate;
+
+    public RedisUtil(RedisTemplate redisTemplate) {
+        // 设置序列化Key的实例化对象
+        redisTemplate.setKeySerializer(new StringRedisSerializer());
+        // 设置序列化Value的实例化对象
+        redisTemplate.setValueSerializer(new GenericJackson2JsonRedisSerializer());
+        this.redisTemplate = redisTemplate;
+    }
 
     /**
      * 指定缓存失效时间
@@ -133,8 +142,8 @@ public class RedisUtil {
     /**
      * 递增
      *
-     * @param key 键
-     * @param delta  要增加几(大于0)
+     * @param key   键
+     * @param delta 要增加几(大于0)
      * @return
      */
     public long incr(String key, long delta) {
@@ -147,8 +156,8 @@ public class RedisUtil {
     /**
      * 递减
      *
-     * @param key 键
-     * @param delta  要减少几(小于0)
+     * @param key   键
+     * @param delta 要减少几(小于0)
      * @return
      */
     public long decr(String key, long delta) {
@@ -562,6 +571,7 @@ public class RedisUtil {
     }
 
     //================有序集合 sort set===================
+
     /**
      * 有序set添加元素
      *
@@ -588,15 +598,16 @@ public class RedisUtil {
 
     /**
      * 获取zset数量
+     *
      * @param key
      * @param value
      * @return
      */
     public long getZsetScore(String key, Object value) {
         Double score = redisTemplate.opsForZSet().score(key, value);
-        if(score==null){
+        if (score == null) {
             return 0;
-        }else{
+        } else {
             return score.longValue();
         }
     }
@@ -604,6 +615,7 @@ public class RedisUtil {
     /**
      * 获取有序集 key 中成员 member 的排名 。
      * 其中有序集成员按 score 值递减 (从大到小) 排序。
+     *
      * @param key
      * @param start
      * @param end
