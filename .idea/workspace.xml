@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed1d8a71-4839-4c83-9af0-0f186014ec7d" name="Changes" comment="暂时跳过登录验证">
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/system/utils/MyRedisUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/film-server-20100/src/main/java/com/system/controller/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/system/utils/RedisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/system/utils/RedisUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/controller/FansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fans-server-10100/src/main/java/com/system/controller/FansController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-server-30100/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-server-30100/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-server-30100/src/main/java/com/system/controller/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-server-30100/src/main/java/com/system/controller/OrdersController.java" afterDir="false" />
-    </list>
+    <list default="true" id="ed1d8a71-4839-4c83-9af0-0f186014ec7d" name="Changes" comment="test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,10 +30,12 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="printErrorStackTraces" value="true" />
-        <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
   <component name="ProjectId" id="2QUnsy9FyIWwrRbna7VK6LMfpI2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -54,6 +48,8 @@
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.CodyProjectSettingsMigration": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
@@ -208,9 +204,6 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SpringGeneralSettings">
-    <option name="allowAutoConfigurationMode" value="true" />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ed1d8a71-4839-4c83-9af0-0f186014ec7d" name="Changes" comment="" />
@@ -239,6 +232,7 @@
       <workItem from="1685890568309" duration="413000" />
       <workItem from="1685928690617" duration="8563000" />
       <workItem from="1686015356005" duration="19610000" />
+      <workItem from="1701686904886" duration="81000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1685759248974</created>
@@ -310,7 +304,15 @@
       <option name="project" value="LOCAL" />
       <updated>1685933613871</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="test">
+      <option name="closed" value="true" />
+      <created>1701686997960</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701686997960</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +342,8 @@
     <MESSAGE value="用户登录功能" />
     <MESSAGE value="正则匹配手机号" />
     <MESSAGE value="暂时跳过登录验证" />
-    <option name="LAST_COMMIT_MESSAGE" value="暂时跳过登录验证" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
